@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add to Cart</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
+    <script src="./js/shared.js"></script>
+    <script src="./js/addtocart.js"></script>
+</head>
+<body>
+    <header>
+        <div class="main-menu">
+            <div class="container">
+                <nav class="navbar navbar-expand-lg navbar-light">
+                    <a class="navbar-brand" href="index.html"><img src="images/logo.png" alt="logo"></a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="navbar-item active">
+                                <a href="index.html" class="nav-link">Home</a>
+                            </li>
+                            <li class="navbar-item">
+                                <a href="shop.html" class="nav-link">Shop</a>
+                            </li>
+                            <li id="login" class="navbar-item">
+                                <a href="login.html" class="nav-link">Login</a>
+                            </li>
+                            <li id="logout" style="display: none;" class="navbar-item">
+                                <a onclick="logout();" href="/index.html" class="nav-link">Logout</a>
+                            </li>
+                        </ul>
+                        <div id="userCart" class="cart my-2 my-lg-0">
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <section class="related-books">
+        <div class="container">
+            <h2>Items added to the cart</h2>
+            <div class="row justify-content-center">
+                <div class="text-center alert alert-danger col-md-auto" role="alert" id="errorMessage" style="display:none"></div>
+                <div class="text-center alert alert-success col-md-auto" role="alert" id="successMessage" style="display:none"></div>
+            </div>
+            <div class="recomended-sec">
+              <div id="cartResults" class="row">
+              </div>
+            </div>
+            <form>
+                <div class="row">
+                    <div class="col-md-6">
+                        <button id="checkoutBtn" class="btn">Checkout</button>
+                        <table>
+                            <tr>
+                                <th>Total</th>
+                                <th id="totalPrice">$0</th>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/owl.carousel.min.js"></script>
+    <script src="js/custom.js"></script>
+</body>
+</html>
